@@ -1,7 +1,14 @@
+<div style="text-align: center;">
 
-<ul>
-  <li *ngFor="let user of users">
-     {{ user }
-    }</li>
+  <h1>App Vuelos</h1>
+  <div>
+  <img width="100" src="assets/img/logo avion.png">
+</div>
+</div>
+<div class="container" >
+  <button (click)="Listar()" class="btn btn-info">Lista</button>
+  <button (click)="Agregar()" class="btn btn-info" style="margin-left: 20px;">Registrar</button>
   
-</ul>
+</div>
+<hr>
+<router-outlet></router-outlet>
