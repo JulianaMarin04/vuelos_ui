@@ -10,10 +10,12 @@ export class ServiceService {
 
   
   constructor(private http:HttpClient) { }
-
-  Url='http://localhost:8080/AppicacionVuelos/Pasajeros';
-
+  url_api= "http://localhost:8080/AppicacionVuelos/Home/Pasajeros";
+  
   getClientes(){
-    return this.http.get<Cliente[]>(this.Url);
+    return this.http.get<Cliente[]>(this.url_api);
+  }
+  registroCliente(cliente:Cliente){
+    return this.http.post<Cliente>(this.url_api, cliente);
   }
 }

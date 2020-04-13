@@ -14,6 +14,9 @@ export class ListarComponent implements OnInit {
   constructor(private service:ServiceService, private router:Router) { }
 
   ngOnInit(): void {
+    
+  }
+  Listar(){
     this.service.getClientes()
     .subscribe(data=>{this.clientes=data;})
   }
