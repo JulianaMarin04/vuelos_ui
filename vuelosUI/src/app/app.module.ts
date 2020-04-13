@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { ListarComponent } from './Cliente/listar/listar.component';
 import { ActualizarComponent } from './Cliente/actualizar/actualizar.component';
 import { AgregarComponent } from './Cliente/agregar/agregar.component';
+import {FormsModule} from '@angular/forms';
+import {ServiceService} from '../app/Service/service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,9 +19,12 @@ import { AgregarComponent } from './Cliente/agregar/agregar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+
   ],
-  providers: [],
+  providers: [ServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

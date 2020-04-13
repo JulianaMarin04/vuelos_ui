@@ -13,10 +13,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="text-center">
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                    <tr *ngFor="let cliente of clientes"  class="text-center">
+                        <td>{{cliente.id_cliente}}</td>
+                        <td>{{cliente.nombre}}</td>
+                        <td>{{cliente.telefono}}</td>
                         <td>
                             <button class="btn btn-warning">Actualizar</button>
                             <button class="btn btn-danger">Eliminar</button>

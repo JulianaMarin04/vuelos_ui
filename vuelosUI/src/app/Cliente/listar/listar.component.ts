@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import {ServiceService} from '../../Service/service.service';
+import { Cliente } from 'src/app/Modelo/Cliente';
 
 @Component({
   selector: 'app-listar',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarComponent implements OnInit {
 
-  constructor() { }
+  clientes:Cliente[];
+  constructor(private service:ServiceService, private router:Router) { }
 
   ngOnInit(): void {
+    this.service.getClientes()
+    .subscribe(data=>{this.clientes=data;})
   }
 
 }
