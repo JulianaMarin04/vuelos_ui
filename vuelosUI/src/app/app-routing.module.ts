@@ -11,13 +11,9 @@ import { ListarVuelosComponent } from './Vuelo/listar-vuelos/listar-vuelos.compo
 const routes: Routes = [
   {path:'listar', component:ListarComponent},
   {path:'agregar', component:AgregarComponent},
-<<<<<<< HEAD
   {path:'actualizar', component:ActualizarComponent},
   {path: 'listarVuelos', component:ListarVuelosComponent}
   
-=======
-  {path:'actualizar', component:ActualizarComponent}
->>>>>>> master
 ];
 
 @NgModule({

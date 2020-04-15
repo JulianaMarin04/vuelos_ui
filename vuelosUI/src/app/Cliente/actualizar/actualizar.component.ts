@@ -18,8 +18,8 @@ export class ActualizarComponent implements OnInit {
   }
 
   Actualizar(){
-    let id=localStorage.getItem("id");
-    this.service.getClienteId(+id)
+    let idCliente=localStorage.getItem("idCliente");
+    this.service.getClienteId(+idCliente)
     .subscribe(data=>{
       this.cliente=data;
     })

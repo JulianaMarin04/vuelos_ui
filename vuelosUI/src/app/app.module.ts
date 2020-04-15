@@ -9,10 +9,7 @@ import { AgregarComponent } from './Cliente/agregar/agregar.component';
 import {FormsModule} from '@angular/forms';
 import {ServiceService} from '../app/Service/service.service';
 import { HttpClientModule } from '@angular/common/http';
-<<<<<<< HEAD
 import { ListarVuelosComponent } from './Vuelo/listar-vuelos/listar-vuelos.component';
-=======
->>>>>>> master
 
 
 @NgModule({
@@ -20,12 +17,8 @@ import { ListarVuelosComponent } from './Vuelo/listar-vuelos/listar-vuelos.compo
     AppComponent,
     ListarComponent,
     AgregarComponent,
-<<<<<<< HEAD
     ActualizarComponent,
     ListarVuelosComponent
-=======
-    ActualizarComponent
->>>>>>> master
    
   ],
   imports: [
