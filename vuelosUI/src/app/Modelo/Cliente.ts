@@ -1,5 +1,5 @@
 export class Cliente{
-    id:number;
+    idCliente:number;
     cedula:number;
     nombre:String;
     telefono:number;

@@ -20,7 +20,7 @@ export class ListarComponent implements OnInit {
       });
   }
   Actualizar(cliente:Cliente):void{
-    localStorage.setItem("id",cliente.id.toString());
+    localStorage.setItem("id",cliente.idCliente.toString());
     this.router.navigate(["actualizar"]);
   }
 
