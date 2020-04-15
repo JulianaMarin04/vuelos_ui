@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,21 +8,22 @@ import { ActualizarComponent } from './Cliente/actualizar/actualizar.component';
 import { AgregarComponent } from './Cliente/agregar/agregar.component';
 import {FormsModule} from '@angular/forms';
 import {ServiceService} from '../app/Service/service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ListarComponent,
-    ActualizarComponent,
-    AgregarComponent
+    AgregarComponent,
+    ActualizarComponent
+   
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
-    FormsModule
-    
+    FormsModule,
+    HttpClientModule
 
   ],
   providers: [ServiceService],

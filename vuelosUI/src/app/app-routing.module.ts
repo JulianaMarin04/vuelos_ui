@@ -10,7 +10,7 @@ import { ActualizarComponent } from './Cliente/actualizar/actualizar.component';
 const routes: Routes = [
   {path:'listar', component:ListarComponent},
   {path:'agregar', component:AgregarComponent},
-  {path:'actualizar/:id', component:ActualizarComponent}
+  {path:'actualizar', component:ActualizarComponent}
 ];
 
 @NgModule({

@@ -14,11 +14,21 @@ export class ListarComponent implements OnInit {
   constructor(private service:ServiceService, private router:Router) { }
 
   ngOnInit(): void {
-    
-  }
-  Listar(){
     this.service.getClientes()
-    .subscribe(data=>{this.clientes=data;})
+    .subscribe(data=>{
+      this.clientes=data;
+      });
+  }
+  Actualizar(cliente:Cliente):void{
+    localStorage.setItem("id",cliente.id.toString());
+    this.router.navigate(["actualizar"]);
   }
 
+  Eliminar(cliente:Cliente){
+    this.service.eliminarCliente(cliente)
+    .subscribe(data=>{
+      this.clientes=this.clientes.filter(c=>c!==cliente);
+      alert("Pasajero Eliminado!!");
+    })
+  }
 }
