@@ -1,6 +1,6 @@
 export class Cliente{
-    id_cliente:number;
+    id:number;
     cedula:number;
-    nombre:string;
+    nombre:String;
     telefono:number;
 }
