@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import {ServiceService} from '../../Service/service.service';
+import { Vuelo } from 'src/app/Modelo/Vuelo';
 
 @Component({
   selector: 'app-listar-vuelos',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListarVuelosComponent implements OnInit {
 
-  constructor() { }
+  vuelos:Vuelo[];
+  constructor(private service:ServiceService, private router:Router) { }
 
   ngOnInit(): void {
+    this.service.getVuelos()
+    .subscribe(data=>{
+      this.vuelos=data;
+      });
   }
 
 }

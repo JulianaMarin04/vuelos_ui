@@ -18,6 +18,9 @@ export class AppComponent {
     this.router.navigate(["agregar"]);
   }
 
+  ListarVuelos(){
+    this.router.navigate(["listarVuelos"]);
+  }
 
 
 }

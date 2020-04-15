@@ -9,19 +9,18 @@
                     <tr class="text-center">
                         <th>Id</th>
                         <th>Numero Vuelo</th>
-                        <th>Cedula</th>
-                        <th>Telefono</th>
+                        <th>Modelo Avion</th>
+                        <th>Capacidad</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let cliente of clientes"  class="text-center">
-                        <td>{{cliente.idCliente}}</td>
-                        <td>{{cliente.nombre}}</td>
-                        <td>{{cliente.cedula}}</td>
-                        <td>{{cliente.telefono}}</td>
+                    <tr *ngFor="let vuelo of vuelos"  class="text-center">
+                        <td>{{vuelo.idVuelo}}</td>
+                        <td>{{vuelo.numeroVuelo}}</td>
+                        <td>{{vuelo.modeloAvion}}</td>
+                        <td>{{vuelo.capacidad}}</td>
                         <td>
-                            <button (click)="Actualizar(cliente)" class="btn btn-warning">Actualizar</button>
-                            <button (click)="Eliminar(cliente)" class="btn btn-danger" style="margin-left: 20px;">Eliminar</button>
+                            <button  class="btn btn-danger" style="margin-left: 20px;">Detalles</button>
                         </td>
                     </tr>
                 </tbody>
