@@ -21,8 +21,8 @@ export class ListarVuelosComponent implements OnInit {
       this.vuelos=data;
       });
   }
-  Listar(){
-    this.service.getClientes()
+  ListarPasajeros(){
+    this.service.getClientesVuelos()
     .subscribe(data=>{
       this.cliente=data;
       });

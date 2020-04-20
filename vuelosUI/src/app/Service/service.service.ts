@@ -18,7 +18,7 @@ export class ServiceService {
     return this.http.get<Cliente[]>(this.url_api);
   }
   getClientesVuelos(){
-    return this.http.get<Cliente[]>(this.url_api_vuelos);
+    return this.http.get<Cliente[]>(this.url_api);
   }
   getVuelos(){
     return this.http.get<Vuelo[]>(this.url_api_vuelos);

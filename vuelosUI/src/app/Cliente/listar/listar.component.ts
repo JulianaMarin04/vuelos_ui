@@ -11,6 +11,7 @@ import { Cliente } from 'src/app/Modelo/Cliente';
 export class ListarComponent implements OnInit {
 
   clientes:Cliente[];
+  cliente:Cliente=new Cliente();
   constructor(private service:ServiceService, private router:Router) { }
 
   ngOnInit(): void {
@@ -18,6 +19,13 @@ export class ListarComponent implements OnInit {
     .subscribe(data=>{
       this.clientes=data;
       });
+  }
+  Agregar(){
+    this.service.registroCliente(this.cliente)
+    .subscribe(data=>{
+      alert("Registro exitoso!!!");
+      this.router.navigate(["listar"]);
+       })
   }
   Actualizar(cliente:Cliente):void{
     localStorage.setItem("idCliente",cliente.idCliente.toString());
