@@ -20,6 +20,7 @@ export class ListarComponent implements OnInit {
       this.clientes=data;
       });
   }
+
   Agregar(){
     this.service.registroCliente(this.cliente)
     .subscribe(data=>{

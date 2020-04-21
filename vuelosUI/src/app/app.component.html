@@ -1,3 +1,7 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+</head>
+<body>
 <div style="text-align: center;" class="image" [ngStyle]="{'background': 'url(assets/img/fondo.jpg) no-repeat 0 0','background-size':'cover'}">
 
   <img width="100" src="assets/img/logo avion.png">
@@ -8,9 +12,20 @@
 <div class="container text-center" >
 
   <button (click)="ListarVuelos()" class="btn btn-info" style="margin-left: 20px;">&nbsp; Vuelos &nbsp;</button>
-  <button (click)="Listar()" class="btn btn-info" style="margin-left: 20px;">&nbsp; &nbsp; Pasajeros &nbsp; &nbsp;</button>
-  <button (click)="Agregar()" class="btn btn-info" style="margin-left: 20px;">&nbsp;Registro pasajero&nbsp;</button>
-  
+    
 </div>
 <hr>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+  <script
+  src="http://code.jquery.com/jquery-3.5.0.slim.min.js"
+  integrity="sha256-MlusDLJIP1GRgLrOflUQtshyP0TwT/RHXsI1wWGnQhs="
+  crossorigin="anonymous"></script>  
+  <script type="text/javascript">
+      $(document).ready( function () {
+          $('#listarPasajeros').DataTable();
+      } );
+  </script>
+  </body>
+
+
 <router-outlet></router-outlet>

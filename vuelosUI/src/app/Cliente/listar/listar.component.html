@@ -1,12 +1,14 @@
 <div class="container">
-    <div align="center" class="card-heard" >
+    <div align="center"  class="card-heard" >
             <h3>Gestion de Pasajeros</h3>
     </div>
     <div>
         <div class="d-flex">
-            
             <div class="card col-sm-4" style="height:50%;background:lightgray"> 
-                <div class="card-body">              
+                <div class="card-body">   
+                        <div align="center" class="card-heard" >
+                            <h4>Registro</h4>
+                        </div>           
                     <form>
                         <div class="form-group">
                             <label for=""> Nombre: </label>
@@ -29,17 +31,27 @@
                     </form>
                 </div>
             </div>
+            
             <div class="card-body col-sm-8">
-                <table class="table table-hover">
+                <div class="header-top">
+                    <div class="navegacion" style="padding: 15px 0;">
+                    <input [(ngModel)]="cliente.idCliente" name="nombre" style="width: 85%" type="search" placeholder="ID Cliente">&nbsp;&nbsp;&nbsp;
+                    <button  class="btn btn-primary" >Buscar</button>
+                    </div>
+                </div>
+                <table class="table table-hover" >
                     <thead>
                         <tr class="text-center">
+                            <th>id</th>
                             <th>Nombre</th>
                             <th>Cedula</th>
                             <th>Telefono</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let cliente of clientes"  class="text-center">
+                            <td>{{cliente. idCliente}}</td>
                             <td>{{cliente.nombre}}</td>
                             <td>{{cliente.cedula}}</td>
                             <td>{{cliente.telefono}}</td>

@@ -10,6 +10,7 @@ import {FormsModule} from '@angular/forms';
 import {ServiceService} from '../app/Service/service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ListarVuelosComponent } from './Vuelo/listar-vuelos/listar-vuelos.component';
+import { FiltroPipe } from './filtro.pipe';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ListarVuelosComponent } from './Vuelo/listar-vuelos/listar-vuelos.compo
     ListarComponent,
     AgregarComponent,
     ActualizarComponent,
-    ListarVuelosComponent
+    ListarVuelosComponent,
+    FiltroPipe
    
   ],
   imports: [

@@ -35,6 +35,10 @@ export class ServiceService {
   eliminarCliente(cliente:Cliente){
     return this.http.delete<Cliente>(this.url_api +"/"+ cliente.idCliente);
   }
+  getClienteIdBuscador(idCliente:number): Cliente{
+    return;
+  }
+
 
 }
 

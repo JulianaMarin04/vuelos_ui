@@ -22,10 +22,7 @@ export class ListarVuelosComponent implements OnInit {
       });
   }
   ListarPasajeros(){
-    this.service.getClientesVuelos()
-    .subscribe(data=>{
-      this.cliente=data;
-      });
+    this.router.navigate(["listar"]);
   }
 
 }
