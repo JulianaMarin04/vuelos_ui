@@ -1,32 +1,32 @@
 <div class="container">
     <div align="center"  class="card-heard" >
-            <h3>Gestion de Pasajeros</h3>
+            <h3>{{"Gestion de Pasajeros" | translate}}</h3>
     </div>
     <div>
         <div class="d-flex">
             <div class="card col-sm-4" style="height:50%;background:lightgray"> 
                 <div class="card-body">   
                         <div align="center" class="card-heard" >
-                            <h4>Registro</h4>
+                            <h4>{{"Registro" | translate}}</h4>
                         </div>           
                     <form>
                         <div class="form-group">
-                            <label for=""> Nombre: </label>
+                            <label for=""> {{"Nombre" | translate}}: </label>
                             <input [(ngModel)]="cliente.nombre" name="nombre" type="text" class="form-control"> 
 
                         </div>
                         <div class="form-group">
-                            <label for=""> Cedula: </label>
+                            <label for=""> {{"Cedula" | translate}}: </label>
                             <input  [(ngModel)]="cliente.cedula" name="cedula" type="number" class="form-control"> 
 
                         </div>
                         <div class="form-group">
-                            <label for=""> Telefono: </label>
+                            <label for=""> {{"Telefono" | translate}}: </label>
                             <input  [(ngModel)]="cliente.telefono" name="telefono" type="number" class="form-control"> 
 
                         </div>
                         <div style="text-align: right;">
-                        <button (click)="Agregar()" class="btn btn-primary">Guardar</button>
+                        <button (click)="Agregar()" class="btn btn-primary">{{"Guardar" | translate}}</button>
                         </div>
                     </form>
                 </div>
@@ -36,16 +36,16 @@
                 <div class="header-top">
                     <div class="navegacion" style="padding: 15px 0;">
                     <input [(ngModel)]="cliente.idCliente" name="nombre" style="width: 85%" type="search" placeholder="ID Cliente">&nbsp;&nbsp;&nbsp;
-                    <button  class="btn btn-primary" >Buscar</button>
+                    <button  class="btn btn-primary" >{{"Buscar" | translate}}</button>
                     </div>
                 </div>
                 <table class="table table-hover" >
                     <thead>
                         <tr class="text-center">
-                            <th>id</th>
-                            <th>Nombre</th>
-                            <th>Cedula</th>
-                            <th>Telefono</th>
+                            <th>{{"Id" | translate}}</th>
+                            <th>{{"Nombre" | translate}}</th>
+                            <th>{{"Cedula" | translate}}</th>
+                            <th>{{"Telefono" | translate}}</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -56,8 +56,8 @@
                             <td>{{cliente.cedula}}</td>
                             <td>{{cliente.telefono}}</td>
                             <td>
-                                <button (click)="Actualizar(cliente)" class="btn btn-warning">Actualizar</button>
-                                <button (click)="Eliminar(cliente)" class="btn btn-danger" style="margin-left: 20px;">Eliminar</button>
+                                <button (click)="Actualizar(cliente)" class="btn btn-warning">{{"Actualizar" | translate}}</button>
+                                <button (click)="Eliminar(cliente)" class="btn btn-danger" style="margin-left: 20px;">{{"Eliminar" | translate}}</button>
                             </td>
                         </tr>
                     </tbody>

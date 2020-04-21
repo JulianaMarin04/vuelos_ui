@@ -1,16 +1,16 @@
 <div class="container col-md-10">
     <div class="card">
         <div class="card-heard">
-            <h3> &nbsp; &nbsp;Lista Vuelos</h3>
+            <h3> &nbsp; &nbsp;{{"Lista Vuelos" | translate}}</h3>
         </div>
         <div class="card-body">
             <table id="listarPasajeros" class="table table-hover">
                 <thead>
                     <tr class="text-center">
-                        <th>Id</th>
-                        <th>Numero Vuelo</th>
-                        <th>Modelo Avion</th>
-                        <th>Capacidad</th>
+                        <th>{{"Id" | translate}}</th>
+                        <th>{{"Numero Vuelo" | translate}}</th>
+                        <th>{{"Modelo Avion" | translate}}</th>
+                        <th>{{"Capacidad" | translate}}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -20,7 +20,7 @@
                         <td>{{vuelo.modeloAvion}}</td>
                         <td>{{vuelo.capacidad}}</td>
                         <td>
-                            <button (click)="ListarPasajeros()" class="btn btn-danger" style="margin-left: 20px;">Detalles</button>
+                            <button (click)="ListarPasajeros()" class="btn btn-danger" style="margin-left: 20px;">{{"Detalles" | translate}}</button>
                         </td>
                     </tr>
                 </tbody>

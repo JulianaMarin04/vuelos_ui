@@ -1,0 +1,22 @@
+{
+"Vuelos": "Flights",
+"App Vuelos": "App Flights",
+"Vuelo": "Flight",
+"Lista Vuelos": "List Flights",
+"Numero Vuelo": "Number Fligths",
+"Modelo Avion": "Airplane Model",
+"Capacidad": "Capacity",
+"Detalles": "Details",
+"Registro": "Registration",
+"Id": "Id",
+"Nombre": "Name",
+"Cedula": "Id card",
+"Telefono": "Phone number",
+"Guardar": "Save",
+"Gestion de Pasajeros": "The Management Passengers",
+"Pasajeros": "Passengers",
+"Actualizar": "Update",
+"Eliminar": "Delete",
+"Buscar": "Search",
+"Actualizacion de Datos": "Data update"
+}

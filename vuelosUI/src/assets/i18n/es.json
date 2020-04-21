@@ -1,0 +1,21 @@
+{
+    "Flights": "Vuelos",
+    "Flight": "Vuelo", 
+    "List Flights": "Lista Vuelos",
+    "Number Fligths": "Numero Vuelo",
+    "Airplane Model": "Modelo Avion",
+    "Capacity": "Capacidad",
+    "Details": "Detalles",
+    "Registration": "Registro",
+    "Name": "Nombre",
+    "Id": "Id",
+    "Id card": "Cedula",
+    "Phone number": "Telefono",
+    "Save": "Guardar",
+    "The Management Passengers": "Gestion de Pasajeros",
+    "Passengers": "Pasajeros",
+    "Update": "Actualizar",
+    "Delete": "Eliminar",
+    "Search": "Buscar",
+    "Data update": "Actualizacion de Datos"
+}
