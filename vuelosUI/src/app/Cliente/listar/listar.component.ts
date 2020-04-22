@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {ServiceService} from '../../Service/service.service';
 import { Cliente } from 'src/app/Modelo/Cliente';
+import { Vuelo } from 'src/app/Modelo/Vuelo';
 
 @Component({
   selector: 'app-listar',
@@ -12,15 +13,21 @@ export class ListarComponent implements OnInit {
 
   clientes:Cliente[];
   cliente:Cliente=new Cliente();
+  vuelo: Vuelo = new Vuelo();
   constructor(private service:ServiceService, private router:Router) { }
 
   ngOnInit(): void {
-    this.service.getClientes()
-    .subscribe(data=>{
-      this.clientes=data;
-      });
+    this.ListarPasajeros();
   }
 
+  ListarPasajeros(){
+    let idVuelo=localStorage.getItem("idVuelo");
+    this.service.getClientesVuelos(+idVuelo)
+    .subscribe(data=>{
+      this.clientes=data;
+    });
+  }
+  
   Agregar(){
     this.service.registroCliente(this.cliente)
     .subscribe(data=>{
@@ -39,5 +46,12 @@ export class ListarComponent implements OnInit {
       this.clientes=this.clientes.filter(c=>c!==cliente);
       alert("Pasajero Eliminado!!");
     })
+  }
+  Buscar(idCliente: number){
+    this.service.getClienteId(idCliente)
+    .subscribe(data=>{
+      this.cliente=data;
+    })
+    this.router.navigate(["buscar"]);
   }
 }

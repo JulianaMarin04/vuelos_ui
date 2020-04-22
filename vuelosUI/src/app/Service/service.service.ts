@@ -10,13 +10,14 @@ export class ServiceService {
   
   constructor(private http:HttpClient) { }
   url_api= 'http://localhost:8080/Home/Pasajeros';
+  url= 'http://localhost:8080/Home/Pasajeros/Vuelos/';
   url_api_vuelos= 'http://localhost:8080/HomeVuelos/Vuelos';
   
   getClientes(){
     return this.http.get<Cliente[]>(this.url_api);
   }
-  getClientesVuelos(idVuelo: number){
-    return this.http.get<Vuelo>(this.url_api +"/"+ idVuelo);;
+  getClientesVuelos(idVuelo:number){
+    return this.http.get<Cliente[]>(this.url + "/" + idVuelo);
   }
   getVuelos(){
     return this.http.get<Vuelo[]>(this.url_api_vuelos);
@@ -33,10 +34,6 @@ export class ServiceService {
   eliminarCliente(cliente:Cliente){
     return this.http.delete<Cliente>(this.url_api +"/"+ cliente.idCliente);
   }
-  getClienteIdBuscador(idCliente:number): Cliente{
-    return;
-  }
-
-
+  
 }
 

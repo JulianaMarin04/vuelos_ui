@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-root',
@@ -15,11 +14,16 @@ export class AppComponent {
     this.translate.setDefaultLang('es');
     this.translate.use('zh');
   }
+  Buscar(){
+    this.router.navigate(["buscar"]);
+  }
 
   Listar(){
     this.router.navigate(["listar"]);
   }
-
+  ListarAll(){
+    this.router.navigate(["listarAll"]);
+  }
   Agregar(){
     this.router.navigate(["agregar"]);
   }

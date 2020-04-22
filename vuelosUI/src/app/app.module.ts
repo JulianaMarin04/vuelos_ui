@@ -13,6 +13,7 @@ import { ListarVuelosComponent } from './Vuelo/listar-vuelos/listar-vuelos.compo
 import { FiltroPipe } from './filtro.pipe';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader'
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { ListarAllComponent } from './Cliente/listar-all/listar-all.component';
   
 export function HttpLoaderFactory (http: HttpClient){
   return new TranslateHttpLoader(http,'./assets/i18n/', '.json');
@@ -25,7 +26,9 @@ export function HttpLoaderFactory (http: HttpClient){
     AgregarComponent,
     ActualizarComponent,
     ListarVuelosComponent,
-    FiltroPipe
+    FiltroPipe,
+    ListarAllComponent,
+
    
   ],
   imports: [
