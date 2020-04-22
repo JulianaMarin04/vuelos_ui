@@ -12,7 +12,7 @@ import { Cliente } from 'src/app/Modelo/Cliente';
 export class ListarVuelosComponent implements OnInit {
 
   vuelos:Vuelo[];
-  cliente:Cliente[];
+  
   constructor(private service:ServiceService, private router:Router) { }
 
   ngOnInit(): void {

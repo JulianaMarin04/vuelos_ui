@@ -27,6 +27,8 @@ export class AppComponent {
   ListarVuelos(){
     this.router.navigate(["listarVuelos"]);
   }
-
+  ListarPasajeros(){
+    this.router.navigate(["listar"]);
+  }
 
 }

@@ -11,14 +11,12 @@ export class ServiceService {
   constructor(private http:HttpClient) { }
   url_api= 'http://localhost:8080/Home/Pasajeros';
   url_api_vuelos= 'http://localhost:8080/HomeVuelos/Vuelos';
-
-  
   
   getClientes(){
     return this.http.get<Cliente[]>(this.url_api);
   }
-  getClientesVuelos(){
-    return this.http.get<Cliente[]>(this.url_api);
+  getClientesVuelos(idVuelo: number){
+    return this.http.get<Vuelo>(this.url_api +"/"+ idVuelo);;
   }
   getVuelos(){
     return this.http.get<Vuelo[]>(this.url_api_vuelos);
