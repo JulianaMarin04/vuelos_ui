@@ -3,8 +3,8 @@
             <h3>{{"Gestion de Pasajeros" | translate}}</h3>
     </div>
     <div>
-        <div class="d-flex">
-            <div class="card col-sm-4" style="height:50%;background:lightgray"> 
+        <div class="d-flex" style="position: absolute; top: 310px; left: 30px;  padding: 15px;" >
+            <div class="card col-sm-4" style="height:50%;background:lightgray; margin: 20px;"> 
                 <div class="card-body">   
                         <div align="center">
                             <h4>{{"Registro" | translate}}</h4>
@@ -32,13 +32,13 @@
                 </div>
             </div>
   
-            <div class="card-body col-sm-8">
-                <div class="header-top">
-                    <div class="navegacion" style="padding: 15px 0;">
-                    <input [(ngModel)]="cliente.idCliente" name=" " style="width: 85%" type="search" placeholder="Ingrese identificador">&nbsp;&nbsp;&nbsp;
-                    <button class="btn btn-primary" >{{"Buscar" | translate}}</button>
+            <div class="row col-sm-8">
+                <div class="col header-top ">
+                    <div class="form-group" style="padding: 15px 0; margin: 10px">
+                    <input [(ngModel)]="filterList" name="filterList"  class="form-control"  type="text" placeholder="Search...">&nbsp;&nbsp;&nbsp;
                     </div>
                 </div>
+                        
                 <table class="table table-hover" >
                     <thead>
                         <tr class="text-center">
@@ -50,8 +50,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let cliente of clientes"  class="text-center">
-                            <td>{{cliente. idCliente}}</td>
+                        <tr *ngFor="let cliente of clientes | filter:filterList"  class="text-center">
+                            <td>{{cliente.idCliente}}</td>
                             <td>{{cliente.nombre}}</td>
                             <td>{{cliente.cedula}}</td>
                             <td>{{cliente.telefono}}</td>
@@ -62,7 +62,7 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </div>    
         </div>
     </div>
 </div>

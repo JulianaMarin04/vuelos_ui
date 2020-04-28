@@ -10,10 +10,10 @@ import {FormsModule} from '@angular/forms';
 import {ServiceService} from '../app/Service/service.service';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ListarVuelosComponent } from './Vuelo/listar-vuelos/listar-vuelos.component';
-import { FiltroPipe } from './filtro.pipe';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader'
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { ListarAllComponent } from './Cliente/listar-all/listar-all.component';
+import { FilterPipe } from './pipes/filter.pipe';
   
 export function HttpLoaderFactory (http: HttpClient){
   return new TranslateHttpLoader(http,'./assets/i18n/', '.json');
@@ -26,8 +26,8 @@ export function HttpLoaderFactory (http: HttpClient){
     AgregarComponent,
     ActualizarComponent,
     ListarVuelosComponent,
-    FiltroPipe,
     ListarAllComponent,
+    FilterPipe,
 
    
   ],
