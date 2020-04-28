@@ -12,12 +12,11 @@ export class AppComponent {
   constructor(private router:Router, public translate: TranslateService){
     this.translate.addLangs(['es','en','zh']);
     this.translate.setDefaultLang('es');
-    //this.translate.use('zh');
+    //this.translate.use('en');
   }
   Buscar(){
     this.router.navigate(["buscar"]);
   }
-
   Listar(){
     this.router.navigate(["listar"]);
   }
@@ -27,7 +26,6 @@ export class AppComponent {
   Agregar(){
     this.router.navigate(["agregar"]);
   }
-
   ListarVuelos(){
     this.router.navigate(["listarVuelos"]);
   }

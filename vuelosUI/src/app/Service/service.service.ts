@@ -34,6 +34,8 @@ export class ServiceService {
   eliminarCliente(cliente:Cliente){
     return this.http.delete<Cliente>(this.url_api +"/"+ cliente.idCliente);
   }
-  
+  asociarVuelosClientes(idVuelo: number, cliente: Cliente){
+    return this.http.post<Cliente>(this.url_api_vuelos + "/" + idVuelo + "/Cliente",cliente);
+  }
 }
 
