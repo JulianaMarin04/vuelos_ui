@@ -12,7 +12,7 @@ export class AppComponent {
   constructor(private router:Router, public translate: TranslateService){
     this.translate.addLangs(['es','en','zh']);
     this.translate.setDefaultLang('es');
-    //this.translate.use('en');
+    this.translate.use('zh');
   }
   Buscar(){
     this.router.navigate(["buscar"]);
